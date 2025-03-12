@@ -13,8 +13,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         
-      - name: Install Newman (Postman CLI)
-        run: npm install -g newman
+      - name: Install Newman (Postman CLI) & HTML Reporter
+        run: npm install -g newman newman-reporter-html
         
       - name: Install OpenConnect
         run: sudo apt-get update && sudo apt-get install -y openconnect
@@ -34,10 +34,24 @@ jobs:
         run: curl -k https://mobileap-uat.aboitizpower.com
         
       - name: Run API Tests
-        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit --reporter-junit-export report.xml || echo "Ignoring Newman errors"
+        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,html --reporter-junit-export docs/report_PChannelRoute.xml --reporter-html-export docs/report_PChannelRoute.html || echo "Ignoring Newman errors"
       
       - name: Upload API Test Report
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report
-          path: report.xml
+          path: report_PChannelRoute.xml
+
+      - name: Upload API Test HMTL Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-report
+          path: report_PChannelRoute.html
+
+      - name: Commit & Push Report to Main
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Update API Test Report" || echo "No changes to commit"
+          git push
