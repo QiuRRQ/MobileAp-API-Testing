@@ -50,6 +50,9 @@ jobs:
           name: api-test-report-html
           path: docs/report_PChannelRouteHTML.html
 
+      - name: Rename HTML Report File
+        run: mv docs/report_PChannelRouteHTML.html docs/index.html
+        
       - name: Commit & Push Report to Main
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
