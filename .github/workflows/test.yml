@@ -40,13 +40,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report
-          path: report_PChannelRoute.xml
+          path: docs/report_PChannelRoute.xml
 
       - name: Upload API Test HMTL Report
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report
-          path: report_PChannelRoute.html
+          path: docs/report_PChannelRoute.html
 
       - name: Commit & Push Report to Main
         run: |
