@@ -1,0 +1,28 @@
+name: Connect to GlobalProtect VPN and Access Host
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  vpn_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install OpenConnect
+        run: sudo apt-get update && sudo apt-get install -y openconnect
+
+      - name: Connect to GlobalProtect VPN
+        run: |
+          echo "${{ secrets.VPN_PASSWORD }}" | sudo openconnect --protocol=gp ${{ secrets.VPN_SERVER }} \
+            --user=${{ secrets.VPN_USERNAME }} --passwd-on-stdin --background
+
+      - name: Wait for VPN Connection
+        run: sleep 10
+
+      - name: Verify VPN Connection
+        run: curl -s ifconfig.me
+
+      - name: Access Target Host
+        run: curl -k https://mobileap-uat.aboitizpower.com
