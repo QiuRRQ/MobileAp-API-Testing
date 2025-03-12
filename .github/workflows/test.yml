@@ -2,8 +2,9 @@ name: API Tests with Newman
 
 
 on:
-  repository_dispatch:
-    types: [trigger-tests]
+  push:
+    branches:
+      - main
 
 jobs:
   vpn_job:
