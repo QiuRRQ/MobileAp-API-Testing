@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "enabled": false,
+    "reason": "Complete flow of BDOU channel with paymongo provider disabled",
+    "paymentChannelCode": "BDOU",
+    "implementationversion": "1"
+  },
+  {
+    "id": 2,
+    "enabled": false,
+    "reason": "Complete flow of BPIA channel with BUX provider disabled",
+    "paymentChannelCode": "BPIA",
+    "implementationversion": "2"
+  },
+  {
+    "id": 3,
+    "enabled": false,
+    "reason": "Complete flow of BPIA channel with paymongo provider disabled",
+    "paymentChannelCode": "BPIA",
+    "implementationversion": "1"
+  }
+]

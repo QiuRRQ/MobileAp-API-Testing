@@ -1,0 +1,10 @@
+[
+  {
+    "label": "VECO SME Minimum Amount BPI",
+    "duCode": "VECO",
+    "accountNumber": "02192100002",
+    "amount": "95",
+    "paymentChannelCode": "BPIA",
+    "implementationversion": "1"
+  }
+]
