@@ -49,9 +49,11 @@ jobs:
           path: docs/report_PChannelRouteHTML.html
 
       - name: Commit & Push Report to Main
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add docs/
           git commit -m "Update API Test Report" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${GH_PAT}@github.com/QiuRRQ/MobileAp-API-Testing.git main
