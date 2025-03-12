@@ -45,7 +45,7 @@ jobs:
       - name: Upload API Test HMTL Report
         uses: actions/upload-artifact@v4
         with:
-          name: api-test-report
+          name: api-test-report-html
           path: docs/report_PChannelRouteHTML.html
 
       - name: Commit & Push Report to Main
