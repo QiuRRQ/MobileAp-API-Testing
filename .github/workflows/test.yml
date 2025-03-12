@@ -1,4 +1,4 @@
-name: Connect to GlobalProtect VPN and Access Host
+name: API Tests with Newman
 
 on:
   push:
@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Install Newman (Postman CLI)
+        run: npm install -g newman
+        
       - name: Install OpenConnect
         run: sudo apt-get update && sudo apt-get install -y openconnect
 
@@ -26,3 +32,12 @@ jobs:
 
       - name: Access Target Host
         run: curl -k https://mobileap-uat.aboitizpower.com
+        
+      - name: Run API Tests
+        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --reporters cli,junit --reporter-junit-export report.xml
+      
+      - name: Upload API Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: api-test-report
+          path: report.xml
