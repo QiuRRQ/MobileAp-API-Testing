@@ -17,6 +17,12 @@ jobs:
         
       - name: Install Newman (Postman CLI) & HTML Reporter
         run: npm install -g newman newman-reporter-htmlextra
+                
+      - name: Install Chromedriver
+        run: npm install -g chromedriver --detect_chromedriver_version
+        
+      - name: Run Chromedriver on Port 52450
+        run: chromedriver --port=52450
         
       - name: Install OpenConnect
         run: sudo apt-get update && sudo apt-get install -y openconnect
@@ -36,7 +42,8 @@ jobs:
         run: curl -k https://mobileap-uat.aboitizpower.com
         
       - name: Run API Tests
-        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra --reporter-junit-export docs/report_PChannelRoute.xml --reporter-htmlextra-export docs/report_PChannelRouteHTML.html || echo "Ignoring Newman errors"
+        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra --reporter-junit-export docs/merged-report.xml --reporter-htmlextra-export docs/merged-report.html &&
+             newman run "QA TESTING Payment Complete Flow.postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "sampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra --reporter-junit-export docs/merged-report.xml --reporter-htmlextra-export docs/merged-report.html || echo "Ignoring Newman errors"
       
       - name: Upload API Test Report
         uses: actions/upload-artifact@v4
@@ -48,10 +55,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report-html
-          path: docs/report_PChannelRouteHTML.html
+          path: docs/merged-report.html
 
       - name: Rename HTML Report File
-        run: mv docs/report_PChannelRouteHTML.html docs/index.html
+        run: mv docs/merged-report.html docs/index.html
         
       - name: Commit & Push Report to Main
         env:
