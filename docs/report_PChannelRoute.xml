@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="QA TESTING Payment Channel Routes(Complete flow)" tests="24" time="26.948">
-  <testsuite name="Enable Automation / Login with Password" id="4092dadf-ea63-460d-ab43-d15aa268ea1f" timestamp="2025-03-12T04:30:28.775Z" tests="0" failures="0" errors="0" time="0.714"/>
-  <testsuite name="Enable Automation / Create suspended payment" id="c7c30c32-5598-4ab9-a83f-e4cfb1b5d6fb" timestamp="2025-03-12T04:30:28.775Z" tests="1" failures="0" errors="0" time="3.613">
-    <testcase name="Create a suspended payment for before the payment channel disabled" time="1.055" classname="EnableAutomationCreateSuspendedPayment"/>
+<testsuites name="QA TESTING Payment Channel Routes(Complete flow)" tests="24" time="19.378">
+  <testsuite name="Enable Automation / Login with Password" id="8b34c3ba-4313-4e01-bc7e-2ced9941f126" timestamp="2025-03-12T05:15:19.788Z" tests="0" failures="0" errors="0" time="0.715"/>
+  <testsuite name="Enable Automation / Create suspended payment" id="9cc9c4b7-5111-4a7d-b5e0-0c3fc28d724d" timestamp="2025-03-12T05:15:19.788Z" tests="1" failures="0" errors="0" time="2.192">
+    <testcase name="Create a suspended payment for before the payment channel disabled" time="1.004" classname="EnableAutomationCreateSuspendedPayment"/>
   </testsuite>
-  <testsuite name="Enable Automation / Disable payment channel" id="90f075eb-8cd4-4d81-bee5-621b9777e60d" timestamp="2025-03-12T04:30:28.775Z" tests="0" failures="0" errors="0" time="0.663"/>
-  <testsuite name="Enable Automation / Check payment channel status" id="e639412a-a0bf-4c04-bc60-d1ac9ac3ab5d" timestamp="2025-03-12T04:30:28.775Z" tests="1" failures="0" errors="0" time="0.348">
-    <testcase name="Validate response for ID 1" time="0.353" classname="EnableAutomationCheckPaymentChannelStatus"/>
-    <testcase name="Validate response for ID 2" time="0.353" classname="EnableAutomationCheckPaymentChannelStatus"/>
-    <testcase name="Validate response for ID 3" time="0.353" classname="EnableAutomationCheckPaymentChannelStatus"/>
+  <testsuite name="Enable Automation / Disable payment channel" id="b82d0160-e5b5-4a7a-84d9-29dcd50ad863" timestamp="2025-03-12T05:15:19.788Z" tests="0" failures="0" errors="0" time="0.638"/>
+  <testsuite name="Enable Automation / Check payment channel status" id="b8c22c4f-e1cd-47b2-a0cc-a909d1b84000" timestamp="2025-03-12T05:15:19.788Z" tests="1" failures="0" errors="0" time="0.331">
+    <testcase name="Validate response for ID 1" time="0.331" classname="EnableAutomationCheckPaymentChannelStatus"/>
+    <testcase name="Validate response for ID 2" time="0.331" classname="EnableAutomationCheckPaymentChannelStatus"/>
+    <testcase name="Validate response for ID 3" time="0.331" classname="EnableAutomationCheckPaymentChannelStatus"/>
   </testsuite>
-  <testsuite name="Cancel suspended payment" id="6d36362e-1a47-4cf6-86b2-8ecf9b610cef" timestamp="2025-03-12T04:30:28.775Z" tests="1" failures="1" errors="0" time="1.161">
-    <testcase name="End user successfully cancel suspended payment" time="1.764" classname="CancelSuspendedPayment"/>
+  <testsuite name="Cancel suspended payment" id="c0932ace-92a4-412c-82e4-a459b55e2e3c" timestamp="2025-03-12T05:15:19.788Z" tests="1" failures="1" errors="0" time="0.918">
+    <testcase name="End user successfully cancel suspended payment" time="1.081" classname="CancelSuspendedPayment"/>
   </testsuite>
-  <testsuite name="Create new payment" id="369ce94b-bd97-47d1-82a9-741c8d743cf6" timestamp="2025-03-12T04:30:28.775Z" tests="1" failures="0" errors="0" time="1.789">
-    <testcase name="End user mustn't be able to create a new payment for Complete flow of BDOU channel with paymongo provider disabled" time="3.255" classname="CreateNewPayment"/>
-    <testcase name="End user can pay through Paymongo" time="3.255" classname="CreateNewPayment"/>
-    <testcase name="End user can pay through Bux" time="3.255" classname="CreateNewPayment"/>
+  <testsuite name="Create new payment" id="1d7aeef1-aa72-4eb8-8704-dd035d00c138" timestamp="2025-03-12T05:15:19.788Z" tests="1" failures="0" errors="0" time="1.001">
+    <testcase name="End user mustn't be able to create a new payment for Complete flow of BDOU channel with paymongo provider disabled" time="0.956" classname="CreateNewPayment"/>
+    <testcase name="End user can pay through Paymongo" time="0.956" classname="CreateNewPayment"/>
+    <testcase name="End user can pay through Bux" time="0.956" classname="CreateNewPayment"/>
   </testsuite>
-  <testsuite name="Enable payment channel" id="2f6f9c7c-2aed-42a7-8cb0-ce3385d21145" timestamp="2025-03-12T04:30:28.775Z" tests="0" failures="0" errors="0" time="0.348"/>
-  <testsuite name="Check payment channel status" id="950ad256-943f-43a0-8aca-52a5faf4fda1" timestamp="2025-03-12T04:30:28.775Z" tests="1" failures="3" errors="0" time="0.346">
-    <testcase name="Validate response for ID 1" time="0.346" classname="CheckPaymentChannelStatus">
+  <testsuite name="Enable payment channel" id="8231e6da-3449-481d-9c14-abb54127de8d" timestamp="2025-03-12T05:15:19.788Z" tests="0" failures="0" errors="0" time="0.334"/>
+  <testsuite name="Check payment channel status" id="22a56a65-015d-4c4d-a974-9a53ca4fd009" timestamp="2025-03-12T05:15:19.788Z" tests="1" failures="3" errors="0" time="0.330">
+    <testcase name="Validate response for ID 1" time="0.330" classname="CheckPaymentChannelStatus">
       <failure type="AssertionFailure" message="expected true to deeply equal false">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: f2ad7f16-130f-4c64-970a-0ad79cc01372.]]>
@@ -32,7 +32,7 @@
    at Object.eval sandbox-script.js:1:8).]]>
       </failure>
     </testcase>
-    <testcase name="Validate response for ID 2" time="0.346" classname="CheckPaymentChannelStatus">
+    <testcase name="Validate response for ID 2" time="0.330" classname="CheckPaymentChannelStatus">
       <failure type="AssertionFailure" message="expected true to deeply equal false">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: f2ad7f16-130f-4c64-970a-0ad79cc01372.]]>
@@ -44,7 +44,7 @@
    at Object.eval sandbox-script.js:1:8).]]>
       </failure>
     </testcase>
-    <testcase name="Validate response for ID 3" time="0.346" classname="CheckPaymentChannelStatus">
+    <testcase name="Validate response for ID 3" time="0.330" classname="CheckPaymentChannelStatus">
       <failure type="AssertionFailure" message="expected true to deeply equal false">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: f2ad7f16-130f-4c64-970a-0ad79cc01372.]]>
