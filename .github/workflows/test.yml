@@ -37,7 +37,7 @@ jobs:
         run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --reporters cli,junit --reporter-junit-export report.xml
       
       - name: Upload API Test Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: api-test-report
           path: report.xml
