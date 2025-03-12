@@ -34,7 +34,7 @@ jobs:
         run: curl -k https://mobileap-uat.aboitizpower.com
         
       - name: Run API Tests
-        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,html --reporter-junit-export docs/report_PChannelRoute.xml --reporter-html-export docs/report_PChannelRoute.html || echo "Ignoring Newman errors"
+        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,html --reporter-junit-export docs/report_PChannelRoute.xml --reporter-html-export docs/report_PChannelRouteHTML.html || echo "Ignoring Newman errors"
       
       - name: Upload API Test Report
         uses: actions/upload-artifact@v4
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: api-test-report
-          path: docs/report_PChannelRoute.html
+          path: docs/report_PChannelRouteHTML.html
 
       - name: Commit & Push Report to Main
         run: |
