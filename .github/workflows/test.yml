@@ -2,6 +2,7 @@ name: API Tests with Newman
 
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
