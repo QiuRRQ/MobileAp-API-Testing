@@ -1,0 +1,1 @@
+{"responder-id":"05fc9ddd-fe50-44e7-b366-f1d643d477e8_1","responder":"APDU MobileAP Service Orchestrator UAT","service-name":"submit-payment","service-version":"3.3.0+913-uat","response-timestamp":"2025-03-13T08:08:48.165004Z","success":true,"response":true}
