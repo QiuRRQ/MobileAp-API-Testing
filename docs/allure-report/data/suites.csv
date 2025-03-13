@@ -1,23 +1,33 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"Pay using bank online","6021","Create suspended payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:33 UTC 2025","passed","Thu Mar 13 04:36:39 UTC 2025","","Enable Automation","",""
-"Pay using bank online","1034","Create suspended payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:56 UTC 2025","passed","Thu Mar 13 04:36:57 UTC 2025","","","",""
-"","3029","navigate To","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:58 UTC 2025","passed","Thu Mar 13 04:37:01 UTC 2025","","","",""
-"","773","Check Status of payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:09 UTC 2025","passed","Thu Mar 13 04:37:10 UTC 2025","","","",""
-"Get all information about this DU account, status (new / on disconnection notice / normal), balance, and pending balance (payments from UBX that haven't been acknowledged)","716","Get Balance After Payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:10 UTC 2025","passed","Thu Mar 13 04:37:11 UTC 2025","","","",""
-"","27","find Element","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:05 UTC 2025","passed","Thu Mar 13 04:37:05 UTC 2025","","","",""
-"","344","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:25 UTC 2025","passed","Thu Mar 13 04:36:25 UTC 2025","","Enable Automation","",""
-"","347","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:18 UTC 2025","failed","Thu Mar 13 04:36:18 UTC 2025","","","",""
-"","36","new Session","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:58 UTC 2025","passed","Thu Mar 13 04:36:58 UTC 2025","","","",""
-"","4020","element Click","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:05 UTC 2025","passed","Thu Mar 13 04:37:09 UTC 2025","","","",""
-"","355","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:10 UTC 2025","passed","Thu Mar 13 04:36:11 UTC 2025","","Enable Automation","",""
-"","344","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:32 UTC 2025","failed","Thu Mar 13 04:36:33 UTC 2025","","","",""
-"This API is for canceling e-payment that was created before","973","Cancel suspended payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:40 UTC 2025","passed","Thu Mar 13 04:36:41 UTC 2025","","","",""
-"","341","Disable payment channel","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:39 UTC 2025","passed","Thu Mar 13 04:36:40 UTC 2025","","Enable Automation","",""
-"Get all information about this DU account, status (new / on disconnection notice / normal), balance, and pending balance (payments from UBX that haven't been acknowledged)","5780","Get Balance Before Payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:50 UTC 2025","passed","Thu Mar 13 04:36:56 UTC 2025","","","",""
-"","340","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:40 UTC 2025","passed","Thu Mar 13 04:36:40 UTC 2025","","Enable Automation","",""
-"","342","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:47 UTC 2025","failed","Thu Mar 13 04:36:47 UTC 2025","","","",""
-"","23","element Send Keys","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:01 UTC 2025","passed","Thu Mar 13 04:37:01 UTC 2025","","","",""
-"","344","Enable payment channel","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:47 UTC 2025","passed","Thu Mar 13 04:36:47 UTC 2025","","","",""
+"","364","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:45 UTC 2025","passed","Thu Mar 13 04:48:45 UTC 2025","","Enable Automation","",""
+"This API is for canceling e-payment that was created before","943","Cancel suspended payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:45 UTC 2025","passed","Thu Mar 13 04:48:46 UTC 2025","","","",""
+"","369","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:23 UTC 2025","failed","Thu Mar 13 04:48:23 UTC 2025","","","",""
+"Login with username (only valid for users before SSO registration was introduced), or email address (for all users)
+
+Note:
+
+1. password will be encrypted before sent (see Pre-request script)
+    
+2. response will be parsed and put into environment variables (see Post-response script)","357","Login with Password","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:38 UTC 2025","passed","Thu Mar 13 04:48:38 UTC 2025","","Enable Automation","",""
+"","365","Enable payment channel","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:52 UTC 2025","passed","Thu Mar 13 04:48:52 UTC 2025","","","",""
+"","23","element Send Keys","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:06 UTC 2025","passed","Thu Mar 13 04:49:06 UTC 2025","","","",""
+"Get all information about this DU account, status (new / on disconnection notice / normal), balance, and pending balance (payments from UBX that haven't been acknowledged)","694","Get Balance After Payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:15 UTC 2025","passed","Thu Mar 13 04:49:16 UTC 2025","","","",""
+"","3028","navigate To","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:03 UTC 2025","passed","Thu Mar 13 04:49:06 UTC 2025","","","",""
+"","23","find Element","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:10 UTC 2025","passed","Thu Mar 13 04:49:10 UTC 2025","","","",""
+"","756","Check Status of payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:15 UTC 2025","passed","Thu Mar 13 04:49:15 UTC 2025","","","",""
+"Pay using bank online","6024","Create new payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:46 UTC 2025","passed","Thu Mar 13 04:48:52 UTC 2025","","","",""
+"","363","Disable payment channel","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:44 UTC 2025","passed","Thu Mar 13 04:48:45 UTC 2025","","Enable Automation","",""
+"","4023","element Click","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:10 UTC 2025","passed","Thu Mar 13 04:49:14 UTC 2025","","","",""
+"","35","new Session","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:03 UTC 2025","passed","Thu Mar 13 04:49:03 UTC 2025","","","",""
+"","362","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:38 UTC 2025","failed","Thu Mar 13 04:48:38 UTC 2025","","","",""
+"","365","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:52 UTC 2025","failed","Thu Mar 13 04:48:53 UTC 2025","","","",""
+"Login with username (only valid for users before SSO registration was introduced), or email address (for all users)
+
+Note:
+
+1. password will be encrypted before sent (see Pre-request script)
+    
+2. response will be parsed and put into environment variables (see Post-response script)","1468","Login with Password","QA TESTING Payment Complete Flow","Thu Mar 13 04:48:54 UTC 2025","passed","Thu Mar 13 04:48:55 UTC 2025","","","",""
 "**This request is a dummy request or an intializer request that is used to define the test flow**
 
 We are defining test steps as data table with 3 columns ""step"" , ""key"" and ""value""
@@ -67,16 +77,13 @@ pm.variables.set(""testStep"",
 
 
 
-```","1037","Test steps","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:57 UTC 2025","passed","Thu Mar 13 04:36:58 UTC 2025","","","",""
-"Login with username (only valid for users before SSO registration was introduced), or email address (for all users)
-
-Note:
-
-1. password will be encrypted before sent (see Pre-request script)
-    
-2. response will be parsed and put into environment variables (see Post-response script)","452","Login with Password","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:33 UTC 2025","passed","Thu Mar 13 04:36:33 UTC 2025","","Enable Automation","",""
-"Pay using bank online","5947","Create new payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:36:41 UTC 2025","passed","Thu Mar 13 04:36:47 UTC 2025","","","",""
-"","22","close Window","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:09 UTC 2025","passed","Thu Mar 13 04:37:09 UTC 2025","","","",""
+```","1054","Test steps","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:02 UTC 2025","passed","Thu Mar 13 04:49:03 UTC 2025","","","",""
+"","366","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:30 UTC 2025","passed","Thu Mar 13 04:48:30 UTC 2025","","Enable Automation","",""
+"","20","close Window","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:14 UTC 2025","passed","Thu Mar 13 04:49:14 UTC 2025","","","",""
+"Pay using bank online","1115","Create suspended payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:01 UTC 2025","passed","Thu Mar 13 04:49:02 UTC 2025","","","",""
+"Pay using bank online","6024","Create suspended payment","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:38 UTC 2025","passed","Thu Mar 13 04:48:44 UTC 2025","","Enable Automation","",""
+"","375","Check payment channel status","QA TESTING Payment Channel Routes(Complete flow)","Thu Mar 13 04:48:15 UTC 2025","passed","Thu Mar 13 04:48:16 UTC 2025","","Enable Automation","",""
+"Get all information about this DU account, status (new / on disconnection notice / normal), balance, and pending balance (payments from UBX that haven't been acknowledged)","5756","Get Balance Before Payment","QA TESTING Payment Complete Flow","Thu Mar 13 04:48:55 UTC 2025","passed","Thu Mar 13 04:49:01 UTC 2025","","","",""
 "This API is used to:
 
 - Update the transaction status to submitted.
@@ -86,11 +93,4 @@ Note:
 - Push e-payment update notification.
     
 
-This API will be called by the client/front-end when the user has been successfully authorize the transaction from the bank webview authorization screen.","273","Submit","QA TESTING Payment Complete Flow","Thu Mar 13 04:37:09 UTC 2025","passed","Thu Mar 13 04:37:09 UTC 2025","","","",""
-"Login with username (only valid for users before SSO registration was introduced), or email address (for all users)
-
-Note:
-
-1. password will be encrypted before sent (see Pre-request script)
-    
-2. response will be parsed and put into environment variables (see Post-response script)","1429","Login with Password","QA TESTING Payment Complete Flow","Thu Mar 13 04:36:48 UTC 2025","passed","Thu Mar 13 04:36:50 UTC 2025","","","",""
+This API will be called by the client/front-end when the user has been successfully authorize the transaction from the bank webview authorization screen.","272","Submit","QA TESTING Payment Complete Flow","Thu Mar 13 04:49:14 UTC 2025","passed","Thu Mar 13 04:49:15 UTC 2025","","","",""

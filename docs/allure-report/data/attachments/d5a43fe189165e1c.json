@@ -1,0 +1,15 @@
+{
+    "Date": "Thu, 13 Mar 2025 04:48:52 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "619",
+    "Connection": "keep-alive",
+    "cache-control": "no-store",
+    "access-control-allow-origin": "*",
+    "content-encoding": "gzip",
+    "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+    "pragma": "no-store",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block",
+    "x-content-type-options": "nosniff",
+    "server": "conduit/2"
+}

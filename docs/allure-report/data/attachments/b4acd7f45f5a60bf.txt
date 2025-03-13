@@ -1,1 +1,0 @@
-{"responder-id": "PaymentGateway-0MCHEHFV", "thread-number": 70, "responder": "APDU MobileAP Payment Gateway", "service-name": "/v1/paymentchannelroutes/setstates", "service-version": "1.0.9+185", "response-timestamp": "2025-03-13T04:36:47.4894132Z", "success": true, "response": [{"id":3,"enabled":true,"timestamp":"2025-03-13T04:36:47.4866439Z"}]}
