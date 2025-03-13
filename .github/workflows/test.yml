@@ -21,8 +21,8 @@ jobs:
       - name: Install Chromedriver
         run: npm install -g chromedriver --detect_chromedriver_version
         
-      - name: Run Chromedriver on Port 52450
-        run: chromedriver --port=52450
+      - name: Run Chromedriver on Port 52450 background
+        run: chromedriver --port=52450 &
         
       - name: Install OpenConnect
         run: sudo apt-get update && sudo apt-get install -y openconnect
