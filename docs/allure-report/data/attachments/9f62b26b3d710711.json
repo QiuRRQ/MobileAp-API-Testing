@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Basic bG9naW46OTliZGM5ZWUtYzUxMS00OWNlLWJlZDMtN2MyZGVmZmZhMDhk",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "e248a2c1-b7ce-4e1e-afef-715cafc69176",
+    "Host": "mobileap-uat.aboitizpower.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "268"
+}

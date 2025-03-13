@@ -1,0 +1,1 @@
+{"responder-id":"786349ba-7d10-47ec-a061-15bffe727d44_1","responder":"APDU MobileAP Service Orchestrator UAT","service-name":"DuAccountRecordInfoImpl","service-version":"3.3.0+913-uat","response-timestamp":"2025-03-13T06:14:37.077783Z","success":true,"response":{"status":"normal","balance":"6674.13","pendingPayments":"8579.13","issues":["affectedByOutage"]}}

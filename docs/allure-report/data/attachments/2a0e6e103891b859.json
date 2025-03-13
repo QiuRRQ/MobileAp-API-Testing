@@ -1,0 +1,12 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpdiI6IjlSVTJOa3JrdFdIdzA5ZzBqV2cxU0E9PSIsInVzZXJJZCI6IjVGbVFtUDJRMU5EU2U0ZXB0eW56RGc9PSIsImRldmljZUlkIjoiOS9yZlYraFlnRVRuaVRxdy9MQjg5Zz09IiwidXNlcm5hbWUiOiJkYjBiYWYwZjM2MmI0ODg1Yjc1NGE4MTkwZDNhYjFlYiIsImRldmljZVR5cGUiOiJTbWFydFBob25lIiwiZGV2aWNlTW9kZWwiOiJzZGtfZ3Bob25lX3g4Nl9hcm0iLCJkZXZpY2VJZGVudGlmaWVyIjoiMTExMTEiLCJkZXZpY2VQbGF0Zm9ybSI6IkFuZHJvaWQiLCJhcHBWZXJzaW9uIjoiMi4zLjArNDMxIiwiYXBwTmFtZSI6ImVuZFVzZXIifQ.Vv-CvPWne6H7RIov5q9AELhhBq4ZJ60UIiIoGh7kTqE",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "4dc2f0ce-c6d6-4071-b529-f1ec77b79318",
+    "Host": "mobileap-uat.aboitizpower.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "58"
+}

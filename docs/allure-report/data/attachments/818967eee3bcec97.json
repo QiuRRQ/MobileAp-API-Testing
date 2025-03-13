@@ -1,0 +1,9 @@
+{
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "112ad07a-408a-4f4c-8658-a8e10c0c6cbe",
+    "Host": "internal-apdu-mobileap-be-payments-uat-223392390.ap-southeast-1.elb.amazonaws.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}
