@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="QA TESTING Payment Complete Flow" tests="18" time="6.335">
-  <testsuite name="Login with Password" id="af6e4390-f24a-48d8-bd56-a9f5a2589a43" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="1.434"/>
-  <testsuite name="Get Balance Before Payment" id="7b4af2f8-8ac8-4090-b3ac-6461e6cb4478" timestamp="2025-03-13T01:58:44.874Z" tests="1" failures="0" errors="0" time="0.735">
-    <testcase name="Get Account balance before payment" time="0.735" classname="GetBalanceBeforePayment"/>
+<testsuites name="QA TESTING Payment Complete Flow" tests="18" time="5.394">
+  <testsuite name="Login with Password" id="ed492e9d-c4c1-4eaf-b4dd-a13ed2bb10b8" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="1.348"/>
+  <testsuite name="Get Balance Before Payment" id="06cf21c2-396e-4012-9245-b737ed8dd43e" timestamp="2025-03-13T02:03:07.539Z" tests="1" failures="0" errors="0" time="0.730">
+    <testcase name="Get Account balance before payment" time="0.730" classname="GetBalanceBeforePayment"/>
   </testsuite>
-  <testsuite name="Create suspended payment" id="f13ba0c8-5ee5-400d-8d97-d21ce26d099d" timestamp="2025-03-13T01:58:44.874Z" tests="1" failures="0" errors="0" time="1.014">
-    <testcase name="Create a new payment with BPIA" time="1.014" classname="CreateSuspendedPayment"/>
+  <testsuite name="Create suspended payment" id="46e76beb-cd0a-460f-835b-422b50fe7e50" timestamp="2025-03-13T02:03:07.539Z" tests="1" failures="0" errors="0" time="1.269">
+    <testcase name="Create a new payment with BPIA" time="1.269" classname="CreateSuspendedPayment"/>
   </testsuite>
-  <testsuite name="Test steps" id="8b7145df-5c84-4cad-a83d-f303e2855068" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="1.060"/>
-  <testsuite name="new Session" id="f80b5cf9-0b2a-4341-8491-6913b271db3f" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="1" time="0.003">
+  <testsuite name="Test steps" id="33e6bfd2-2251-4f70-89ec-26f08087c229" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.974"/>
+  <testsuite name="new Session" id="e7b04d9a-53f3-49a0-881d-18ede14e2db3" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="1" time="0.003">
     <system-err><![CDATA[Iteration: 0
 
 ---
@@ -18,8 +18,8 @@ unhandled request
 ---
 ]]></system-err>
   </testsuite>
-  <testsuite name="navigate To" id="4ab77e6b-ff3b-4c5b-a678-88651ee4fbf5" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="0.001"/>
-  <testsuite name="find Element" id="fa5a8b0a-d427-46c7-a8c4-68c652598c16" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="4" time="0.002">
+  <testsuite name="navigate To" id="06a6c001-7f72-4395-b747-80a4a87c9e7f" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.001"/>
+  <testsuite name="find Element" id="fc7c0b2c-246e-44fd-86b4-f4170a83739b" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="4" time="0.002">
     <system-err><![CDATA[Iteration: 0
 
 ---
@@ -50,12 +50,17 @@ unhandled request
 ---
 ]]></system-err>
   </testsuite>
-  <testsuite name="element Send Keys" id="1f425f23-5758-4ecb-872e-6dc34d7a8261" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="0.002"/>
-  <testsuite name="element Click" id="cbc7aced-830a-42d5-98ce-98a5d56edbb2" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="0.002"/>
-  <testsuite name="close Window" id="2dc3c765-9cf2-44d1-b194-08030f0887dc" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="0.002"/>
-  <testsuite name="Submit" id="65f75092-5dd8-4233-afa7-b900ad729d8d" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="0.276"/>
-  <testsuite name="Check Status of payment" id="d07ccd70-7927-4b6e-bad5-1989f4f5fc94" timestamp="2025-03-13T01:58:44.874Z" tests="0" failures="0" errors="0" time="1.070"/>
-  <testsuite name="Get Balance After Payment" id="ff211eca-d1e1-49ab-b778-5c342e4eed4c" timestamp="2025-03-13T01:58:44.874Z" tests="1" failures="0" errors="0" time="0.727">
-    <testcase name="The balance isn't updated yet. Because the status is  PendingProviderOk" time="0.727" classname="GetBalanceAfterPayment"/>
+  <testsuite name="element Send Keys" id="6be70cc9-03d1-4adc-b7c4-12f73be13734" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.002"/>
+  <testsuite name="element Click" id="6b83668f-aded-4be8-9b9a-cfe05996bd04" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.001"/>
+  <testsuite name="close Window" id="1d323254-e9e1-498e-9d2e-567e5cf271f1" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.002"/>
+  <testsuite name="Submit" id="392f14f7-4094-4d69-a6b1-4b1b0bc3a36b" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.290"/>
+  <testsuite name="Check Status of payment" id="acb63e48-ac74-444a-8694-04b5f9edd8c5" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="1" time="0.438">
+    <system-err><![CDATA[Iteration: 0
+
+---
+testScriptError: Cannot read properties of undefined (reading 'status')
+---
+]]></system-err>
   </testsuite>
+  <testsuite name="Get Balance After Payment" id="620f1200-f34d-4bc5-92e7-209682f6f7a0" timestamp="2025-03-13T02:03:07.539Z" tests="0" failures="0" errors="0" time="0.328"/>
 </testsuites>
