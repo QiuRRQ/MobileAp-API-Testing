@@ -15,8 +15,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         
-      - name: Install Newman (Postman CLI), HTML Reporter & HTML Merger
-        run: npm install -g newman newman-reporter-htmlextra html-merger
+      - name: Install Newman (Postman CLI), HTML Reporter, Allure reports
+        run: npm install -g newman newman-reporter-htmlextra newman-reporter-allure allure-commandline
                 
       - name: Install Chromedriver
         run: npm install -g chromedriver --detect_chromedriver_version
@@ -42,8 +42,8 @@ jobs:
         run: curl -k https://mobileap-uat.aboitizpower.com
         
       - name: Run API Tests
-        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra --reporter-junit-export docs/report_PChannelRoute.xml --reporter-htmlextra-export docs/report_PChannelRoute.html &&
-             newman run "QA TESTING Payment Complete Flow.postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "sampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra --reporter-junit-export docs/report_PCompleteFlow.xml --reporter-htmlextra-export docs/report_PCompleteFlow.html || echo "Ignoring Newman errors"
+        run: newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra,allure --reporter-junit-export docs/report_PChannelRoute.xml --reporter-htmlextra-export docs/report_PChannelRoute.html --reporter-allure-export allure-results/ &&
+             newman run "QA TESTING Payment Complete Flow.postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "sampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra,allure --reporter-junit-export docs/report_PCompleteFlow.xml --reporter-htmlextra-export docs/report_PCompleteFlow.html --reporter-allure-export allure-results/ || echo "Ignoring Newman errors"
       
       - name: Upload API Test report_PChannelRoute
         uses: actions/upload-artifact@v4
@@ -69,11 +69,11 @@ jobs:
           name: report_PCompleteFlow-html
           path: docs/report_PCompleteFlow.html
       
-      - name: Merge Html Report
-        run: html-merger -i docs/report_PChannelRoute.html docs/report_PCompleteFlow.html -o docs/merged-report.html
+      - name: Generate Allure Report
+        run: allure generate allure-results --clean -o allure-report
         
       - name: Rename HTML Report File
-        run: mv docs/merged-report.html docs/index.html
+        run: mv allure-report/index.html docs/index.html
         
       - name: Commit & Push Report to Main
         env:
