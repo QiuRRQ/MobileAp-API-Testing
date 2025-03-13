@@ -78,11 +78,6 @@ jobs:
           name: allure-report
           path: docs/allure-report
         
-      - name: Rename HTML Report File
-        run: |          
-             rm -rf docs/allure-report
-             mv allure-report docs/
-        
       - name: Commit & Push Report to Main
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
