@@ -1,0 +1,40 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - npm install -g newman newman-reporter-htmlextra newman-reporter-allure allure-commandline
+      - npm install -g chromedriver --detect_chromedriver_version
+      - sudo apt-get update && sudo apt-get install -y openconnect
+
+  pre_build:
+    commands:
+      - chromedriver --port=52450 --host=127.0.0.1 --url-base=/wd/hub &
+      - echo "${VPN_PASSWORD}" | sudo openconnect --protocol=gp ${VPN_SERVER} --user=${VPN_USERNAME} --passwd-on-stdin --background
+      - sleep 10
+      - curl -s ifconfig.me
+      - curl -k https://mobileap-uat.aboitizpower.com
+
+  build:
+    commands:
+      - newman run "QA TESTING Payment Channel Routes(Complete flow).postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "ChannelRouteSampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra,allure --reporter-junit-export docs/report_PChannelRoute.xml --reporter-htmlextra-export docs/report_PChannelRoute.html --reporter-allure-export allure-results/
+      - newman run "QA TESTING Payment Complete Flow.postman_collection.json" -e "UAT SO.postman_environment.json" --iteration-data "sampleData.json" --suppress-exit-code --reporters cli,junit,htmlextra,allure --reporter-junit-export docs/report_PCompleteFlow.xml --reporter-htmlextra-export docs/report_PCompleteFlow.html --reporter-allure-export allure-results/ || echo "Ignoring Newman errors"
+
+  post_build:
+    commands:
+      - allure generate ./allure-results --clean -o docs/allure-report
+      - aws s3 cp docs/report_PChannelRoute.xml s3://qiurrqbucket/reports/
+      - aws s3 cp docs/report_PChannelRoute.html s3://qiurrqbucket/reports/
+      - aws s3 cp docs/report_PCompleteFlow.xml s3://qiurrqbucket/reports/
+      - aws s3 cp docs/report_PCompleteFlow.html s3://qiurrqbucket/reports/
+      - aws s3 cp --recursive docs/allure-report s3://qiurrqbucket/allure-reports/
+
+artifacts:
+  files:
+    - "docs/report_PChannelRoute.xml"
+    - "docs/report_PChannelRoute.html"
+    - "docs/report_PCompleteFlow.xml"
+    - "docs/report_PCompleteFlow.html"
+    - "docs/allure-report/**/*"
