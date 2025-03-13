@@ -68,12 +68,20 @@ jobs:
         with:
           name: report_PCompleteFlow-html
           path: docs/report_PCompleteFlow.html
+
+      - name: Upload Allure Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
       
       - name: Generate Allure Report
         run: allure generate allure-results --clean -o allure-report
         
       - name: Rename HTML Report File
-        run: mv allure-report/index.html docs/index.html
+        run: |          
+             rm -rf docs/allure-report
+             mv allure-report docs/
         
       - name: Commit & Push Report to Main
         env:
@@ -81,6 +89,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add docs/
+          git add docs/allure-report
           git commit -m "Update API Test Report" || echo "No changes to commit"
           git push https://x-access-token:${GH_PAT}@github.com/QiuRRQ/MobileAp-API-Testing.git main
