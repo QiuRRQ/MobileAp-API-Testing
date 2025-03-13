@@ -1,3 +1,0 @@
-{
-    "url": "https://app.bux.ph/test/bux_payment/bbf49d1b1f2046b48da9a243e0b7de10"
-}

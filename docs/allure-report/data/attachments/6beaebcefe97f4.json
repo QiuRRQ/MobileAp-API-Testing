@@ -1,0 +1,11 @@
+{
+    "Content-Type": "application/json",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "324c6085-44b3-44ed-93a2-d7ee0c76fca8",
+    "Host": "internal-apdu-mobileap-be-payments-uat-223392390.ap-southeast-1.elb.amazonaws.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Content-Length": "68"
+}
