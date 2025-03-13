@@ -1,0 +1,2 @@
+level: warn, messages: Using "postman.setNextRequest" is deprecated. Use "pm.execution.setNextRequest()" instead.
+level: warn, messages: [object Object]

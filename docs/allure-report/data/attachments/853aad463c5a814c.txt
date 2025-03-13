@@ -1,0 +1,1 @@
+{"username":"azizreg@rover.info","password":"5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8","userDevice":{"type":"SmartPhone","model":"sdk_gphone_x86_arm","deviceIdentifier":"11111","platform":"Android","appVersion":"2.3.0+431","appName":"endUser"}}

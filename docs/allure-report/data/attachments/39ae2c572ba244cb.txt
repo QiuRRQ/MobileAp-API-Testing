@@ -1,0 +1,18 @@
+{
+    "capabilities": {
+        "alwaysMatch": {
+            "browserName": "chrome",
+            "acceptInsecureCerts": true,
+            "goog:chromeOptions": {
+                "w3c": true
+            }
+        },
+        "firstMatch": [
+            {}
+        ]
+    },
+    "desiredCapabilities": {
+        "browserName": "chrome",
+        "acceptInsecureCerts": true
+    }
+}

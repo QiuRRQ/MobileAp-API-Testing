@@ -1,0 +1,7 @@
+{
+    "duCode": "VECO",
+    "accountNumber": "52557000008",
+    "amount": "100",
+    "paymentChannelCode": "BPIA",
+    "paymentChannelImplementationVersion": "1"
+  }

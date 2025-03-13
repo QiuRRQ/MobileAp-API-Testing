@@ -1,0 +1,63 @@
+if (pm.info.requestName === "Test steps") {
+    const parse = require('csv-parse/lib/sync')
+    //Environmental variable where we copy-pasted the csv content
+    const input = pm.variables.get("testStep");
+    const records = parse(input, {
+        columns: true,
+        skip_empty_lines: true
+    })
+
+    pm.variables.set("testStepOrder", records)
+} else if (pm.info.requestName.includes("get")) {
+    pm.variables.set(pm.variables.get("key"), pm.response.json().value)
+    console.warn(pm.info.requestName, pm.variables.get("key"), pm.variables.get(pm.variables.get("key")))
+}
+
+if(pm.info.requestName !== "Login with Password" &&
+pm.info.requestName !== "Get Balance Before Payment" &&
+pm.info.requestName !== "Create suspended payment" &&
+pm.info.requestName !== "Get Balance After Payment" &&
+pm.info.requestName !== "Check Status of payment" &&
+pm.info.requestName !== "Submit"){
+    
+    let new_records = pm.variables.get("testStepOrder");
+
+    let step = new_records.length ? new_records.shift() : undefined
+
+    if (step) {
+        postman.setNextRequest(step.step)
+        pm.variables.set("key", step.key)
+        pm.variables.set("value", step.value)
+        console.warn(step)
+        if (step.step === "wait") {
+            setTimeout(() => {
+                let step = new_records.shift()
+                pm.variables.set("key", step.key)
+                pm.variables.set("value", step.value)
+                postman.setNextRequest(step.step)
+                console.warn(step)
+            }, (pm.variables.get("key") === "seconds") ? 1000 * step.value : step.value)
+        } else if (step.step === "assert") {
+            console.log(step)
+            while (step && step.step === "assert") {
+                pm.test(`Validate the value of ${pm.variables.get("key")} is ${pm.variables.get("value")}`, function () {
+                    pm.expect(pm.variables.replaceIn('{{{{key}}}}')).to.be.eql(step.value)
+                });
+
+                step = new_records.shift()
+                if (step) {
+                    pm.variables.set("key", step.key)
+                    pm.variables.set("value", step.value)
+                    postman.setNextRequest(step.step)
+                }
+            }
+
+            
+        }
+
+    } else {
+        postman.setNextRequest(null)
+    }
+
+    pm.variables.set("testStepOrder", new_records)
+}
