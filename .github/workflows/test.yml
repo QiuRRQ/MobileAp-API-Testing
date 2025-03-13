@@ -84,6 +84,8 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          touch .nojekyll
+          git add .nojekyll
           git add docs/allure-report
           git commit -m "Update API Test Report" || echo "No changes to commit"
           git push https://x-access-token:${GH_PAT}@github.com/QiuRRQ/MobileAp-API-Testing.git main
