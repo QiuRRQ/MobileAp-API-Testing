@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="QA TESTING Payment Complete Flow" tests="18" time="5.292">
+  <testsuite name="Login with Password" id="b967b00e-4bce-4a7e-a63a-76ea65078207" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="1.156"/>
+  <testsuite name="Get Balance Before Payment" id="5a4625e4-cfdf-46b6-a7e1-d0d85ac4514d" timestamp="2025-03-13T04:23:23.877Z" tests="1" failures="0" errors="0" time="0.766">
+    <testcase name="Get Account balance before payment" time="0.766" classname="GetBalanceBeforePayment"/>
+  </testsuite>
+  <testsuite name="Create suspended payment" id="bdad801b-3009-4f38-95c0-6c3ce850e5e8" timestamp="2025-03-13T04:23:23.877Z" tests="1" failures="0" errors="0" time="0.943">
+    <testcase name="Create a new payment with BPIA" time="0.943" classname="CreateSuspendedPayment"/>
+  </testsuite>
+  <testsuite name="Test steps" id="38169248-2300-43fc-bf51-c7dc2c511a28" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.802"/>
+  <testsuite name="new Session" id="cd62785b-0c07-45ba-ae2b-87e5733ffa0e" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="1" time="0.003">
+    <system-err><![CDATA[Iteration: 0
+
+---
+testScriptError: Unexpected token 'u' at 1:1
+unhandled request
+^
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="navigate To" id="cfd133b1-a645-4466-a252-2bb65dc53a2c" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.002"/>
+  <testsuite name="find Element" id="74f2067b-7a2e-4ff2-892e-d6192b2a8785" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="4" time="0.002">
+    <system-err><![CDATA[Iteration: 0
+
+---
+testScriptError: Unexpected token 'u' at 1:1
+unhandled request
+^
+---
+Iteration: 0
+
+---
+testScriptError: Unexpected token 'u' at 1:1
+unhandled request
+^
+---
+Iteration: 0
+
+---
+testScriptError: Unexpected token 'u' at 1:1
+unhandled request
+^
+---
+Iteration: 0
+
+---
+testScriptError: Unexpected token 'u' at 1:1
+unhandled request
+^
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="element Send Keys" id="87b28392-f551-4c21-b0c1-c2397e420fb0" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.001"/>
+  <testsuite name="element Click" id="aa9dc6a5-8f49-4e9b-9d5a-e0c279935434" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.001"/>
+  <testsuite name="close Window" id="3659ea1f-0d47-46ce-a3ad-ef5753529c2f" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.002"/>
+  <testsuite name="Submit" id="dda1773e-96c9-4d58-8a00-32e0f9e2219d" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.213"/>
+  <testsuite name="Check Status of payment" id="261d78ea-758c-4f41-bd59-63941ba25249" timestamp="2025-03-13T04:23:23.877Z" tests="0" failures="0" errors="0" time="0.714"/>
+  <testsuite name="Get Balance After Payment" id="14f74951-cdab-4f10-accd-0dca51ba5dbb" timestamp="2025-03-13T04:23:23.877Z" tests="1" failures="0" errors="0" time="0.681">
+    <testcase name="The balance isn't updated yet. Because the status is  PendingProviderOk" time="0.681" classname="GetBalanceAfterPayment"/>
+  </testsuite>
+</testsuites>
