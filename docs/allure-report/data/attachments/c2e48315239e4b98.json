@@ -1,0 +1,10 @@
+{
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpdiI6InIzREZTVUhwSWFtQkJXbndZSUxHTFE9PSIsInVzZXJJZCI6IjVGbVFtUDJRMU5EU2U0ZXB0eW56RGc9PSIsImRldmljZUlkIjoiVmpTWlMyMDZudStENUEyQmd5cldJZz09IiwidXNlcm5hbWUiOiJkYjBiYWYwZjM2MmI0ODg1Yjc1NGE4MTkwZDNhYjFlYiIsImRldmljZVR5cGUiOiJTbWFydFBob25lIiwiZGV2aWNlTW9kZWwiOiJzZGtfZ3Bob25lX3g4Nl9hcm0iLCJkZXZpY2VJZGVudGlmaWVyIjoiMTExMTEiLCJkZXZpY2VQbGF0Zm9ybSI6IkFuZHJvaWQiLCJhcHBWZXJzaW9uIjoiMi4zLjArNDMxIiwiYXBwTmFtZSI6ImVuZFVzZXIifQ.ug_CGGGgLUCb_hFtbQ7MbFfhDj0QsZAx31KVGITobdw",
+    "User-Agent": "PostmanRuntime/7.39.1",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "fcee1ee5-8bdb-4624-b810-5540f6151143",
+    "Host": "mobileap-uat.aboitizpower.com",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}
